@@ -11,7 +11,7 @@ int main()
   float signal[signal_size];
   float peak = 0.0;
   for (int i = 0; i < signal_size; i++)
-    signal[i] = rand() % (1000 - 1 + 1) + 1;
+    signal[i] = rand() % (signal_size - 1 + 1) + 1;
   
   double start_time = omp_get_wtime(), run_time;
   omp_set_num_threads(NUMBER_OF_THREADS);

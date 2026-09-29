@@ -10,7 +10,7 @@ int main()
   int signal_size = 200;
   float signal[signal_size];
   for (int i = 0; i < signal_size; i++)
-    signal[i] = rand() % (100 - 1 + 1) + 1;
+    signal[i] = rand() % (signal_size - 1 + 1) + 1;
   int total_noise_count = 0;
   double start_time = omp_get_wtime(), run_time;
   omp_set_num_threads(NUMBER_OF_THREADS);
